@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projetos Profissionais — Kaiky.dev</title>
+    <link rel="stylesheet" href="Projetos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="inicio.html" class="logo-link">
+                <div class="logo-bg">
+                    <img src="pc.png" alt="Logo" class="mark">
+                </div>
+                <span>Kaiky.dev</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="inicio.html" class="nav-link active">Voltar</a></li> 
+            </ul>      
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-value">6</span>
+                <span class="stat-label">Módulos</span>
+            </div>
+            <div class="stat-item main-stat">
+                <span class="stat-value">LVL 03</span>
+                <span class="stat-label">Desenvolvedor Jr.</span>
+                <div class="progress-bar"><div class="progress-fill"></div></div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Foco</span>
+            </div>
+        </section>
+
+        <section class="section-header">
+            <h1>Galeria de <span class="highlight">Projetos</span></h1>
+            <p class="subtitle">Filtre por categoria para explorar minha trajetória acadêmica.</p>
+            
+            <div class="filter-group">
+                <button class="filter-btn active" onclick="filterProjects('todos', this)">Todos</button>
+                <button class="filter-btn" onclick="filterProjects('Exatas', this)">Exatas</button>
+                <button class="filter-btn" onclick="filterProjects('Tecnologia', this)">Tecnologia</button>
+                <button class="filter-btn" onclick="filterProjects('Humanas', this)">Humanas</button>
+            </div>
+        </section>
+
+        <section id="grid" class="grid">
+            <article class="card" data-category="Exatas" onclick="openModalMatematica()">
+                <div class="card-glow"></div>
+                <div class="card-icon">∑</div>
+                <div class="card-content">
+                    <h4>Matemática</h4>
+                    <span class="view-more">Ver Detalhes →</span>
+                </div>
+            </article>
+
+            <article class="card" data-category="Humanas" onclick="openModalLinguagens()">
+                <div class="card-glow"></div>
+                <div class="card-icon">文</div>
+                <div class="card-content">
+                    <h4>Linguagens</h4>
+                    <span class="view-more">Ver Detalhes →</span>
+                </div>
+            </article>
+
+            <article class="card" data-category="Humanas" onclick="openModalHumanas()">
+                <div class="card-glow"></div>
+                <div class="card-icon">🌍</div>
+                <div class="card-content">
+                    <h4>Humanas</h4>
+                    <span class="view-more">Ver Detalhes →</span>
+                </div>
+            </article>
+
+            <article class="card" data-category="Exatas" onclick="openModalNatureza()">
+                <div class="card-glow"></div>
+                <div class="card-icon">🧪</div>
+                <div class="card-content">
+                    <h4>Natureza</h4>
+                    <span class="view-more">Ver Detalhes →</span>
+                </div>
+            </article>
+
+            <article class="card" data-category="Tecnologia" onclick="openModalBancoDados()">
+                <div class="card-glow"></div>
+                <div class="card-icon">💾</div>
+                <div class="card-content">
+                    <h4>Banco de Dados</h4>
+                    <span class="view-more">Ver Detalhes →</span>
+                </div>
+            </article>
+
+            <article class="card" data-category="Tecnologia" onclick="openModalIoT()">
+                <div class="card-glow"></div>
+                <div class="card-icon">📡</div>
+                <div class="card-content">
+                    <h4>Internet das Coisas</h4>
+                    <span class="view-more">Ver Detalhes →</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()" aria-label="Fechar">&times;</button>
+            
+            <header class="modal-header">
+                <div class="modal-meta">Documentação • <span id="modalCategory">Categoria</span></div>
+                <h2 id="modalTitle">Título</h2>
+            </header>
+            
+            <div class="modal-body">
+                <div class="document-style">
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+
+            <footer class="modal-footer">
+                <div class="footer-status">
+                    <span class="status-dot"></span> Revisado
+                </div>
+                <div class="modal-buttons">
+                    <a id="modalLinkExtra" href="" target="_blank" class="btn-link">Ir para a atividade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Matemática -->
+    <div id="modalMatematica" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModalMatematica()" aria-label="Fechar">&times;</button>
+            <header class="modal-header">
+                <div class="modal-meta">Documentação • Matemática</div>
+                <h2>Cálculo Estrutural</h2>
+            </header>
+            <div class="modal-body">
+                <div class="document-style">
+                    <p>Relatório detalhado sobre cálculos de funções e trigonometria aplicados.</p>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <div class="footer-status">
+                    <span class="status-dot"></span> Revisado
+                </div>
+                <div class="modal-buttons">
+                    <a id="linkMatematica" href="https://docs.google.com/document/d/15bXQgfUvKJQLeIyQMbmlG97O2-Q0ULo2FvT8UIp5lyk/edit?usp=sharing"_blank" class="btn-link">Ir para a atividade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Linguagens -->
+    <div id="modalLinguagens" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModalLinguagens()" aria-label="Fechar">&times;</button>
+            <header class="modal-header">
+                <div class="modal-meta">Documentação • Linguagens</div>
+                <h2>Análise Textual</h2>
+            </header>
+            <div class="modal-body">
+                <div class="document-style">
+                    <p>Estudo sobre variação linguística e produção acadêmica.</p>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <div class="footer-status">
+                    <span class="status-dot"></span> Revisado
+                </div>
+                <div class="modal-buttons">
+                    <a id="linkLinguagens" href="https://docs.google.com/document/d/1CBR6W2oDOFyFy29BvnR0QTS9NnZ_u9N1ECI0q3sZjXM/edit?usp=sharing" target="_blank" class="btn-link">Ir para a atividade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Humanas -->
+    <div id="modalHumanas" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModalHumanas()" aria-label="Fechar">&times;</button>
+            <header class="modal-header">
+                <div class="modal-meta">Documentação • Humanas</div>
+                <h2>Geopolítica Moderna</h2>
+            </header>
+            <div class="modal-body">
+                <div class="document-style">
+                    <p>Análise dos conflitos territoriais contemporâneos.</p>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <div class="footer-status">
+                    <span class="status-dot"></span> Revisado
+                </div>
+                <div class="modal-buttons">
+                    <a id="linkHumanas" href="https://docs.google.com/document/d/1N2pjqIwtdRZMUKshfzKHvHP2A3W_KZ5-mMgurNKXGGY/edit?usp=sharing" target="_blank" class="btn-link">Ir para a atividade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Natureza -->
+    <div id="modalNatureza" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModalNatureza()" aria-label="Fechar">&times;</button>
+            <header class="modal-header">
+                <div class="modal-meta">Documentação • Natureza</div>
+                <h2>Termodinâmica Aplicada</h2>
+            </header>
+            <div class="modal-body">
+                <div class="document-style">
+                    <p>Experimentos de transferência de calor e física clássica.</p>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <div class="footer-status">
+                    <span class="status-dot"></span> Revisado
+                </div>
+                <div class="modal-buttons">
+                    <a id="linkNatureza" href="https://docs.google.com/document/d/1zVisqrExfVbcQSKAmpqd7nLZNn12geOXiTr40QkSjq8/edit?usp=sharing" target="_blank" class="btn-link">Ir para a atividade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Banco de Dados -->
+    <div id="modalBancoDados" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModalBancoDados()" aria-label="Fechar">&times;</button>
+            <header class="modal-header">
+                <div class="modal-meta">Documentação • Tecnologia</div>
+                <h2>Modelagem SQL</h2>
+            </header>
+            <div class="modal-body">
+                <div class="document-style">
+                    <p>Scripts de automação para bancos de dados relacionais.</p>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <div class="footer-status">
+                    <span class="status-dot"></span> Revisado
+                </div>
+                <div class="modal-buttons">
+                    <a id="linkBancoDados" href="https://docs.google.com/document/d/1zBCUg8segSuOqLIxV3GU66BmvsG7GlVMwMnPh7TM7uI/edit?usp=sharing" target="_blank" class="btn-link">Ir para a atividade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal IoT -->
+    <div id="modalIoT" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModalIoT()" aria-label="Fechar">&times;</button>
+            <header class="modal-header">
+                <div class="modal-meta">Documentação • IoT</div>
+                <h2>Sensores e WiFi</h2>
+            </header>
+            <div class="modal-body">
+                <div class="document-style">
+                    <p>Monitoramento remoto com sensores e ESP32.</p>
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <div class="footer-status">
+                    <span class="status-dot"></span> Revisado
+                </div>
+                <div class="modal-buttons">
+                    <a id="linkIoT" href="https://docs.google.com/document/d/1zBCUg8segSuOqLIxV3GU66BmvsG7GlVMwMnPh7TM7uI/edit?usp=sharing" target="_blank" class="btn-link">Ir para a atividade</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <footer>© <span id="year"></span> Kaiky Socorro • Florianópolis, SC</footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function filterProjects(category, btn) {
+            const cards = document.querySelectorAll('.card');
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'todos' || card.getAttribute('data-category') === category) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // Funções Matemática
+        function openModalMatematica() {
+            document.getElementById('modalMatematica').style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModalMatematica() {
+            document.getElementById('modalMatematica').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Funções Linguagens
+        function openModalLinguagens() {
+            document.getElementById('modalLinguagens').style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModalLinguagens() {
+            document.getElementById('modalLinguagens').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Funções Humanas
+        function openModalHumanas() {
+            document.getElementById('modalHumanas').style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModalHumanas() {
+            document.getElementById('modalHumanas').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Funções Natureza
+        function openModalNatureza() {
+            document.getElementById('modalNatureza').style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModalNatureza() {
+            document.getElementById('modalNatureza').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Funções Banco de Dados
+        function openModalBancoDados() {
+            document.getElementById('modalBancoDados').style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModalBancoDados() {
+            document.getElementById('modalBancoDados').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Funções IoT
+        function openModalIoT() {
+            document.getElementById('modalIoT').style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModalIoT() {
+            document.getElementById('modalIoT').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Fechar modal ao clicar fora
+        window.onclick = (e) => { 
+            if(e.target.id === 'modalMatematica') closeModalMatematica();
+            if(e.target.id === 'modalLinguagens') closeModalLinguagens();
+            if(e.target.id === 'modalHumanas') closeModalHumanas();
+            if(e.target.id === 'modalNatureza') closeModalNatureza();
+            if(e.target.id === 'modalBancoDados') closeModalBancoDados();
+            if(e.target.id === 'modalIoT') closeModalIoT();
+        }
+    </script>
+</body>
+</html>

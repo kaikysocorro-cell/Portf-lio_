@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contato — Kaiky.dev</title>
+    <link rel="stylesheet" href="contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="inicio.html" class="logo-link">
+                <div class="logo-bg">
+                    <img src="pc.png" alt="Logo" class="mark">
+                </div>
+                <span class="logo-text">Kaiky.dev</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Projetos.html" class="nav-link">Projetos</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="inicio.html" class="nav-link active">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="contact-header">
+            <h1>Vamos <span class="highlight">conversar?</span></h1>
+            <p>Seja para um projeto, uma dúvida ou apenas para trocar uma ideia sobre tecnologia. Estou sempre aberto a novas conexões.</p>
+        </section>
+
+        <div class="contact-grid">
+            <a href="https://wa.me/5548999999999" target="_blank" class="contact-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">💬</div>
+                <div class="card-info">
+                    <h3>WhatsApp</h3>
+                    <p>Ideal para mensagens rápidas e suporte direto.</p>
+                </div>
+                <span class="card-link">Enviar mensagem →</span>
+            </a>
+
+            <a href="mailto:kaiky.contato@email.com" class="contact-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">📧</div>
+                <div class="card-info">
+                    <h3>E-mail</h3>
+                    <p>Para propostas formais e parcerias acadêmicas.</p>
+                </div>
+                <span class="card-link">Mandar e-mail →</span>
+            </a>
+
+            <a href="https://linkedin.com/in/kaiky-socorro" target="_blank" class="contact-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">🔗</div>
+                <div class="card-info">
+                    <h3>LinkedIn</h3>
+                    <p>Conecte-se comigo profissionalmente e veja meu currículo.</p>
+                </div>
+                <span class="card-link">Seguir perfil →</span>
+            </a>
+
+            <div class="contact-card static">
+                <div class="card-icon">📍</div>
+                <div class="card-info">
+                    <h3>Localização</h3>
+                    <p>Florianópolis, Santa Catarina • Brasil</p>
+                </div>
+                <span class="card-link status-label"><span class="status-dot"></span> Disponível Remotamente</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>© <span id="year"></span> Kaiky Socorro • Desenvolvedor de Sistemas Jr.</footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

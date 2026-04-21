@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sobre — Kaiky.dev</title>
+    <link rel="stylesheet" href="sobre.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="inicio.html" class="logo-link">
+                <div class="logo-bg">
+                    <img src="pc.png" alt="Logo" class="mark">
+                </div>
+                <span>Kaiky.dev</span>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Projetos.html" class="nav-link">Projetos</a></li>
+                <li><a href="inicio.html" class="nav-link">Voltar</a></li> 
+            </ul>      
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="profile-header">
+            <h1>Minha <span class="highlight">História</span></h1>
+            <p class="subtitle">Um pouco sobre quem sou, o que faço e onde pretendo chegar.</p>
+        </section>
+
+        <div class="profile-grid">
+            <aside class="sidebar">
+                <div class="main-photo-slot">
+                    <img src="sua-foto.jpg" alt="Kaiky Socorro" class="profile-img">
+                    <div class="experience-badge">3ª Série EM • SESI</div>
+                </div>
+                
+                <div class="skills-card">
+                    <h3>Habilidades</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Exatas</span>
+                        <span class="tag">Socialização</span>
+                        <span class="tag">Trabalho em Grupo</span>
+                        <span class="tag">Marketing</span>
+                        <span class="tag">Dev. Sistemas</span>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="content-area">
+                <article class="bio-card">
+                    <h2>Biografia</h2>
+                    <p>Meu nome é <strong>Kaiky Castro Socorro</strong>, tenho 17 anos e sou natural de Florianópolis, SC. Atualmente, curso o ensino médio técnico em Desenvolvimento de Sistemas no SESI SENAI, onde encontrei minha afinidade com o mundo das exatas e da tecnologia.</p>
+                    <p>Minha jornada é marcada pelo equilíbrio entre o foco técnico e a experiência prática no atendimento ao público, o que me ajudou a desenvolver uma comunicação clara e assertiva.</p>
+                </article>
+
+                <div class="experience-section">
+                    <h2>Trajetória Profissional</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="time-mark">Atual</span>
+                            <div class="timeline-content">
+                                <h3>Atendimento e Vendas</h3>
+                                <p>Setor de bebidas e hospitalidade.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="time-mark">Anterior</span>
+                            <div class="timeline-content">
+                                <h3>Recepcionista & Marketing</h3>
+                                <p>Agendamentos e estratégias de divulgação.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="time-mark">Anterior</span>
+                            <div class="timeline-content">
+                                <h3>Vendas Specialized</h3>
+                                <p>Itens de surf e moda praia profissional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="gallery-section">
+            <div class="section-divider">
+                <h2>Galeria Visual</h2>
+                <hr>
+            </div>
+            <div class="image-grid">
+                <figure class="image-card">
+                    <div class="img-wrapper">
+                        <span class="img-label">Vivência</span>
+                        <div class="img-inner-placeholder">FOTO_01</div>
+                    </div>
+                </figure>
+                <figure class="image-card">
+                    <div class="img-wrapper">
+                        <span class="img-label">Hobbies</span>
+                        <div class="img-inner-placeholder">FOTO_02</div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>© <span id="year"></span> Kaiky Socorro • Desenvolvedor em Formação</footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
