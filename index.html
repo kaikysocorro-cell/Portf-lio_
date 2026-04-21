@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Kaiky Castro | Portfólio Profissional</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-bg">
+                <img src="pc.png" alt="Ícone PC" class="mark" />
+            </div>
+            <span class="logo-text">Meu Portfólio</span>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="Projetos.html" class="nav-link">Projetos</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-container">
+        <section class="hero-card">
+            <div class="intro-content">
+                <div class="badge">
+                    <span class="dot"></span> Disponível para novos projetos
+                </div>
+                <h1>Desenvolvendo o <span class="highlight">Futuro Digital</span></h1>
+                <p>Olá, eu sou <strong>Kaiky Castro Socorro</strong>. Estudante de Desenvolvimento de Sistemas em Florianópolis, focado em transformar ideias complexas em interfaces elegantes e funcionais.</p>
+                
+                <div class="cta-group">
+                    <a class="btn-primary" href="Projetos.html">
+                        Explorar Projetos
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a class="btn-secondary" href="sobre.html">Minha História</a>
+                </div>
+            </div>
+
+            <div class="profile-side">
+                <div class="avatar-wrapper">
+                    <img src="pc.png" alt="Avatar Kaiky" class="main-avatar">
+                </div>
+                <div class="profile-info">
+                    <h3>Kaiky Castro</h3>
+                    <p>Sistemas • SESI SENAI</p>
+                    <div class="social-mini">SC, Brasil</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <p>© <span id="year"></span> • Kaiky Castro Socorro • </p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
